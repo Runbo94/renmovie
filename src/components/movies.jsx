@@ -36,7 +36,7 @@ class Movies extends Component {
   };
 
   handleGenreSelect = genre => {
-    console.log(genre);
+    this.setState({ selectedGenre: genre });
   };
 
   render() {
@@ -52,6 +52,7 @@ class Movies extends Component {
             textProperty="name"
             valueProperty="_id"
             onItemSelect={this.handleGenreSelect}
+            selectedItem={this.state.selectedGenre}
           />
         </div>
         <div className="col">
