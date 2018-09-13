@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <ToastContainer />
-        <NavBar user={this.state.user} />
+        <NavBar user={user} />
         <main className="container">
           <Switch>
             <Route path="/register" component={RegisterForm} />
@@ -37,7 +37,7 @@ class App extends Component {
             <ProtectedRoute path="/movies/:id" component={MovieForm} />
             <Route
               path="/movies"
-              render={props => <Movies {...props} user={this.state.user} />}
+              render={props => <Movies {...props} user={user} />}
             />
             <Route path="/customers" component={Customers} />
             <Route path="/rentals" component={Rentals} />
