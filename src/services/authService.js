@@ -1,8 +1,7 @@
 import http from "./httpService";
 import jwtDecode from "jwt-decode";
-import { apiEndpoint } from "../config.json";
 
-const api = apiEndpoint + "/auth";
+const api = "/auth";
 
 http.setJwt(getJwt());
 
